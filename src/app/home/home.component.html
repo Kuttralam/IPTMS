@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="home.component.css">
+  </head>
+<body>
+    <app-navbar></app-navbar>
+    
+    <div class="d-flex justify-content-center">
+
+    <h1 class="bd-title" style="text-align: center; color:#000;   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;">
+        Welcome To IPTMS Portal</h1>
+    </div>
+<!--cards-->
+    <ul class="cards">
+      <li>
+        <a [routerLink]="['/InsurancePackages']" class="card" style="background: linear-gradient(120deg,#7ee8fa, #fff);">
+          <img class="card__image" src="../../assets/images/maroon.jpg"/>
+          <div class="card__overlay">
+            <div class="card__header">                   
+              <div class="card__header-text">
+                <h1 class="card__title">Insurance Details</h1>
+              </div>
+            </div>
+            <p class="card__description">Provides the list of insurance agencies with their available limits and duration for claim processing.</p>
+          </div>
+        </a>      
+      </li>
+
+      <li>
+        <a [routerLink]="['/InitiateClaim']" class="card" style="background: linear-gradient(120deg,#7ee8fa, #fff);">
+          <img class="card__image" src="../../assets/images/blue.jpg"/>
+          <div class="card__overlay">
+            <div class="card__header">                   
+              <div class="card__header-text">
+                <h1 class="card__title">Insurance Claim</h1>
+              </div>
+            </div>
+            <p class="card__description">Insurance claim initiation, balance amount to be paid will be calculated.</p>
+          </div>
+        </a>      
+      </li>
+
+      <li>
+        <a [routerLink]="['/TreatmentPackage']" class="card" style="background: linear-gradient(120deg,#7ee8fa, #fff);">
+          <img class="card__image" src="../../assets/images/teal.jpg"/>
+          <div class="card__overlay">
+            <div class="card__header">                   
+              <div class="card__header-text">
+                <h1 class="card__title">Treatment Package Details</h1>
+              </div>
+            </div>
+            <p class="card__description">Provides a list of treatment packages available at the hospital for international patients.</p>
+          </div>
+        </a>      
+      </li>
+
+      <li>
+        <a [routerLink]="['/DoctorDetails']" class="card" style="background: linear-gradient(120deg,#7ee8fa, #fff);">
+          <img class="card__image" src="../../assets/images/green.jpg"/>
+          <div class="card__overlay">
+            <div class="card__header">                   
+              <div class="card__header-text">
+                <h1 class="card__title">Specialists Details</h1>
+              </div>
+            </div>
+            <p class="card__description">Provides the list of specialists with their experience and contact detail.</p>
+          </div>
+        </a>      
+      </li>
+
+      <li>
+        <a [routerLink]="['/PatientsTreatmentPlan']" class="card" style="background: linear-gradient(120deg,#7ee8fa, #fff);">
+          <img class="card__image" src="../../assets/images/Dark Blue.jpg"/>
+          <div class="card__overlay">
+            <div class="card__header">                   
+              <div class="card__header-text">
+                <h1 class="card__title">Treatment Plan</h1>
+              </div>
+            </div>
+            <p class="card__description">For a new international patient, based on the ailment, a time-table of consultations by specialists should be provided.</p>
+          </div>
+        </a>      
+      </li>
+
+      <li>
+        <a [routerLink]="['/About']" class="card" style="background: linear-gradient(120deg,#7ee8fa, #fff);">
+          <img class="card__image" src="../../assets/images/gold.jpg"/>
+          <div class="card__overlay">
+            <div class="card__header">                   
+              <div class="card__header-text">
+                <h1 class="card__title">About Our Team</h1>
+              </div>
+            </div>
+            <p class="card__description">The App is designed for International Patients for easy access of the Specialists, Treatment Plans, Insurer Details.</p>
+          </div>
+        </a>      
+      </li>
+
+    </ul>
+<!--cards-->
+
+</body>
+</html>

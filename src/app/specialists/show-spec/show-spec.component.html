@@ -1,0 +1,30 @@
+<div class="container">
+
+    <h1 class="bd-title" style="text-align: center; color:#000;   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+        ">Specialist Details</h1>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search By Area Of Expertise" [(ngModel)]="filterTerm" style="width:20%;">
+    </div>
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Specialist Id</th>
+            <th>Specialist Name</th>
+            <th>Area Of Expertise</th>
+            <th>Years Of Experience</th>
+            <th>Contact Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of SpecialistList | filter:filterTerm">
+            <td>{{dataItem.specialistId}}</td>
+            <td>Dr. {{dataItem.name}}</td>
+            <td>{{dataItem.expertise}}</td>
+            <td>{{dataItem.yearsOfExp}} years</td>
+            <td>+91 {{dataItem.contact}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

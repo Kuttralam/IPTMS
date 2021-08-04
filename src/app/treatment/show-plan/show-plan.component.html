@@ -1,0 +1,56 @@
+<div class="container">
+
+  <h1 class="bd-title" style="text-align: center; color:#000;   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;">
+    Patient's Treatment Plan Details</h1>
+  
+  <button type="button" style="  background-color: #444444;" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal" (click)="InitiateClick()"
+  data-backdrop="static" data-keyboard="false">Add New Patient
+  </button>
+    <br><br>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document" style="width:40%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">{{ModalTitle}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeClick()" >
+          <span aria-hidden="true" style=" font-size: 30px;color:#ee0000;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <app-add-plan [treatment]="treatment" *ngIf="ActivateAddEditTreatComp">
+            </app-add-plan>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Patient Id</th>
+            <th>Patient Name</th>
+            <th>Ailment Name</th>
+            <th>Package Type</th>
+            <th>Package Details</th>
+            <th>Cost (&#x20B9;)</th>
+            <th>Specialist Name</th>
+            <th>Treatment Start Date</th>
+            <th>Treatment End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of TreatmentList">
+            <td>{{dataItem.PatientId}}</td>
+            <td>{{dataItem.Name}}</td>
+            <td>{{dataItem.AilmentName}}</td>
+            <td>{{dataItem.PackageName}}</td>
+            <td>{{dataItem.TestDetails}}</td>
+            <td>&#x20B9; {{dataItem.Cost}}</td>
+            <td>Dr. {{dataItem.SpecialistName}}</td>
+            <td>{{dataItem.TreatmentCommencementDate}}</td>
+            <td>{{dataItem.TreatmentEndDate}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

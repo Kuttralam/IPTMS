@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!--<ul class="navbar-nav">
+    <a class="nav-link" (click)="backClicked()">&laquo; Back</a>
+  </ul>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <a class="navbar-brand" routerLink="/Home">IPTMS Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Claim Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="insurer()" routerLinkActive="active">Insurance Details</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="claim()" routerLinkActive="active">Insurance Claim</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Treatment Offering Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="treatmentpackages()" routerLinkActive="active">Treatment Package Details</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="specialists()" routerLinkActive="active">Specialist Details</a>
+            </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="treatment()" routerLinkActive="active">Treatment Plan</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <a class="nav-link" (click)="about()" routerLinkActive="active"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/high-importance.png" width="25" height="25"/></a>
+    </ul>
+    &nbsp;
+      <ul class="navbar-nav">
+          <a class="nav-link" (click)="logout()" routerLinkActive="active">Logout</a>        
+      </ul>
+    </div>
+  </nav>
+<div style="display: inline-block; padding: 8px 16px;">
+  <button (click)="backClicked()" class="btn btn-primary" style="background-color: #444444;">
+    &#8249;&#8249; Back
+</button>
+</div>

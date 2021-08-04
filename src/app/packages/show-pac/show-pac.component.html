@@ -1,0 +1,32 @@
+<div class="container">
+
+    <h1 class="bd-title" style="text-align: center; color:#000;   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;">
+        Treatment Package Details</h1>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search By Package Name" [(ngModel)]="filterTerm" style="width:20%;">
+    </div>
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Package Id</th>
+            <th>Ailment Name</th>
+            <th>Package Type</th>
+            <th>Package Details</th>
+            <th>Treatment Cost (&#x20B9;)</th>
+            <th>Duration (Weeks)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of PackagesList | filter:filterTerm">
+            <td>{{dataItem.packageId}}</td>
+            <td>{{dataItem.ailment}}</td>
+            <td>{{dataItem.packageName}}</td>
+            <td>{{dataItem.testDetails}}</td>
+            <td>&#x20B9; {{dataItem.cost}}</td>
+            <td>{{dataItem.duration}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

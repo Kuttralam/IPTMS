@@ -1,0 +1,30 @@
+<div class="container">
+    <h1 class="bd-title" style="text-align: center; color:#000;   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+">Insurance Details</h1>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search By Insurer Package Name" [(ngModel)]="filterTerm" style="width:20%;">
+    </div>
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Insurer Id</th>
+            <th>Insurer Name</th>
+            <th>Package Type</th>
+            <th>Amount Limit (&#x20B9;)</th>
+            <th>Disbursement (Weeks)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of InsurerList | filter:filterTerm; let i=index;">
+            <td>{{i+1}}</td>
+            <td>{{dataItem.insurerName}}</td>
+            <td>{{dataItem.insurerPackageName}}</td>
+            <td>&#x20B9; {{dataItem.amountLimit}}</td>
+            <td>{{dataItem.disbursementDuration}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>

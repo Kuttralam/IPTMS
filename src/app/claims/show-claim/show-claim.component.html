@@ -1,0 +1,50 @@
+<div class="container">
+<h1 class="bd-title" style="text-align: center; color:#000;   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+">Insurance Claimed Details</h1>
+
+<button type="button" style="  background-color: #444444;" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal" (click)="InitiateClick()"
+data-backdrop="static" data-keyboard="false" >Initiate Claim
+</button>
+  <br><br>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document"  style="width:40%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; ">{{ModalTitle}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeClick()" >
+            <span aria-hidden="true" style=" font-size: 30px;color:#ee0000;">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <app-add-edit-claim [claim]="claim" *ngIf="ActivateAddEditClaimComp">
+            </app-add-edit-claim>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Claim Id</th>
+            <th>Patient Name</th>
+            <th>Ailment Name</th>
+            <th>Package Type</th>
+            <th>Insurer Name</th>
+            <th>Payable Balance (&#x20B9;)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of ClaimsList">
+            <td>{{dataItem.claimId}}</td>
+            <td>{{dataItem.patientName}}</td>
+            <td>{{dataItem.ailmentName}}</td>
+            <td>{{dataItem.packageName}}</td>
+            <td>{{dataItem.insurerName}}</td>
+            <td>&#x20B9; {{dataItem.paybleBalance}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
