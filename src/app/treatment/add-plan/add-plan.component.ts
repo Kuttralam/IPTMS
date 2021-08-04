@@ -53,7 +53,6 @@ export class AddPlanComponent implements OnInit {
 
     this.service.getTreatmentPlanList(val).subscribe(res=>{
       this.showMsg=true;
-      setTimeout(() => {window.location.reload();},700);
     },
     error => {
       this.showFail=true;
