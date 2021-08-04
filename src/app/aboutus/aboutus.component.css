@@ -12,11 +12,7 @@ body{
   margin: 0;
   padding: 0;
   background: linear-gradient(120deg,#7ee8fa, #eec0c6);
-<<<<<<< HEAD
   height: 100vh;
-=======
-  height: 100vh;  
->>>>>>> ec43ffa5ba396a417f01942f354f76f53f563d90
   overflow: auto;
 }
 
