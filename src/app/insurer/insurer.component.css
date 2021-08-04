@@ -9,5 +9,5 @@ body{
   padding: 0;
   background: linear-gradient(120deg,#7ee8fa, #eec0c6);
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 }
