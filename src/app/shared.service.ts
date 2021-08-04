@@ -7,10 +7,17 @@ import {Observable} from 'rxjs';
 })
 export class SharedService {
 
-  readonly insurer="https://localhost:44370/api/InsuranceClaim";
-  readonly offerings="https://localhost:44362/api/Treatmentoffering";
-  readonly treatment="https://localhost:44385/api/Treatment";
-  readonly login="https://localhost:44346/api/Authorization";
+  //readonly insurer="https://localhost:44370/api/InsuranceClaim";
+  readonly insurer="https://ipinsuranceclaimmicroserviceiptms.azurewebsites.net/api/InsuranceClaim";
+
+  //readonly offerings="https://localhost:44362/api/Treatmentoffering";
+  readonly offerings="https://iptreatmentofferingiptms.azurewebsites.net/api/Treatmentoffering";
+  
+  //readonly treatment="https://localhost:44385/api/Treatment";
+  readonly treatment="https://iptreatmentmicroserviceiptms.azurewebsites.net/api/Treatment";
+  
+  //readonly login="https://localhost:44344/api/Authorization";
+  readonly login="https://authorizationmicroservicesiptms.azurewebsites.net/api/Authorization";
 
   constructor(private https:HttpClient) { }
 

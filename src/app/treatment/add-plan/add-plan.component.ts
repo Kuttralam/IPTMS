@@ -42,6 +42,7 @@ export class AddPlanComponent implements OnInit {
         if(this.Name==""||this.Age==""||this.Ailment==""||this.PackageName==""||this.CommencementDate=="")
         {
           this.showWarn=true;
+      setTimeout(() => {this.showWarn=false;},2000);
           return;
         }
         this.Name="";
