@@ -87,7 +87,6 @@ export class AddEditClaimComponent implements OnInit {
       if(res.toString()!="0")
         {
           this.showMsg=true;
-          setTimeout(() => {window.location.reload();},700);
           return;
         }
         this.patientName="";
