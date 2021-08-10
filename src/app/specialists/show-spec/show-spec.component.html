@@ -20,10 +20,10 @@
     <tbody>
         <tr *ngFor="let dataItem of SpecialistList | filter:filterTerm">
             <td>{{dataItem.specialistId}}</td>
-            <td>Dr. {{dataItem.name}}</td>
-            <td>{{dataItem.expertise}}</td>
-            <td>{{dataItem.yearsOfExp}} years</td>
-            <td>+91 {{dataItem.contact}}</td>
+            <td>Dr. {{dataItem.specialistName}}</td>
+            <td>{{dataItem.areaOfExpertise}}</td>
+            <td>{{dataItem.yearsOfExperience}} years</td>
+            <td>+91 {{dataItem.contactNumber}}</td>
         </tr>
     </tbody>
 </table>

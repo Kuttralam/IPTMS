@@ -12,14 +12,14 @@ export class AddEditClaimComponent implements OnInit {
   constructor(private service:SharedService,private router:Router) {
     this.patientName="";
     this.ailmentName="";
-    this.packageName="";
+    this.packageType="";
     this.insurerName="";
     
    }
    @Input() claim:any;
    patientName:string;
    ailmentName:string;
-   packageName:string;
+   packageType:string;
    insurerName:string;
 
    showMsg:boolean=false;
@@ -38,7 +38,7 @@ export class AddEditClaimComponent implements OnInit {
      this.service.getclaimsList().subscribe((data:any)=>{
        this.ClaimsList=data;
        this.ailmentName=this.claim.ailmentName;
-       this.packageName=this.claim.packageName;       
+       this.packageType=this.claim.packageType;       
      });
      this.service.getinsurerList().subscribe(data=>{
       this.InsurerList=data;
@@ -54,19 +54,19 @@ export class AddEditClaimComponent implements OnInit {
      var val = {
       patientName:this.patientName,
       ailmentName:this.ailmentName,
-      packageName:this.packageName,
+      packageType:this.packageType,
       insurerName:this.insurerName
             };
  
      //alert(this.patientName+this.ailmentName);
-      if(this.patientName==""||this.ailmentName==""||this.packageName==""||this.insurerName=="")
+      if(this.patientName==""||this.ailmentName==""||this.packageType==""||this.insurerName=="")
         {
           this.showWarn=true;
           setTimeout(() => {this.showWarn=false;},2000);
           return;
         }
       
-        if(this.patientName!=null&&this.ailmentName!=null&&this.packageName!=null&&this.insurerName=="")
+        if(this.patientName!=null&&this.ailmentName!=null&&this.packageType!=null&&this.insurerName=="")
         {
           this.showWarn=true;
           setTimeout(() => {this.showWarn=false;},2000);
@@ -87,11 +87,12 @@ export class AddEditClaimComponent implements OnInit {
       if(res.toString()!="0")
         {
           this.showMsg=true;
+          setTimeout(() => {window.location.reload();},700);
           return;
         }
         this.patientName="";
         this.ailmentName="";
-        this.packageName="";
+        this.packageType="";
         this.insurerName="";
       this.loadClaimsList();
      },
@@ -105,7 +106,7 @@ export class AddEditClaimComponent implements OnInit {
    {
       this.patientName="";
       this.ailmentName="";
-      this.packageName="";
+      this.packageType="";
       this.insurerName="";
   }
 

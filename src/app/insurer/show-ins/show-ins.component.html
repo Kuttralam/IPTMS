@@ -20,9 +20,9 @@
         <tr *ngFor="let dataItem of InsurerList | filter:filterTerm; let i=index;">
             <td>{{i+1}}</td>
             <td>{{dataItem.insurerName}}</td>
-            <td>{{dataItem.insurerPackageName}}</td>
+            <td>{{dataItem.packageType}}</td>
             <td>&#x20B9; {{dataItem.amountLimit}}</td>
-            <td>{{dataItem.disbursementDuration}}</td>
+            <td>{{dataItem.disbursementDurationInWeeks}}</td>
             
         </tr>
     </tbody>

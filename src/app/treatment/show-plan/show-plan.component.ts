@@ -24,11 +24,11 @@ export class ShowPlanComponent implements OnInit {
   InitiateClick(){
     this.treatment={
       PatientId:"",
-      Name:"",
-      Age:"",
-      Ailment:"",
-      PackageName:"",
-      CommencementDate:""
+      patientName:"",
+      patientAge:"",
+      ailmentName:"",
+      packageType:"",
+      treatmentStartDate:""
     }
     this.ModalTitle="Patient Detail";
     this.ActivateAddEditTreatComp=true;

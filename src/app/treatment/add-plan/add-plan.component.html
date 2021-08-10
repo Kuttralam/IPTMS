@@ -27,20 +27,20 @@
 
         <label class="col-sm-3 col-form-label" style="font-weight: bold;">Patient Name</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" [(ngModel)]="Name"
+            <input type="text" class="form-control" [(ngModel)]="patientName"
             placeholder="Enter Patient Name">
         </div>
         <br><br>
         <label class="col-sm-3 col-form-label" style="font-weight: bold;">Patient Age</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" [(ngModel)]="Age"
+            <input type="text" class="form-control" [(ngModel)]="patientAge"
             placeholder="Enter patient Age">
         </div>
         <br><br>
         
         <label class="col-sm-3 col-form-label" style="font-weight: bold;">Ailment Name</label>
         <div class="col-sm-9">
-           <select class="form-control minimal" [(ngModel)]="Ailment" required>
+           <select class="form-control minimal" [(ngModel)]="ailmentName" required>
                <option disabled selected value>Select Ailment Name</option>
                <option>Orthopedics</option>
                <option>Urology</option>
@@ -50,7 +50,7 @@
         
         <label class="col-sm-3 col-form-label" style="font-weight: bold;">Package Type</label>
         <div class="col-sm-9">
-           <select class="form-control minimal" [(ngModel)]="PackageName" required>
+           <select class="form-control minimal" [(ngModel)]="packageType" required>
                <option disabled selected value>Select Package Type</option>
                <option>Basic</option>
                <option>Special</option>
@@ -60,7 +60,7 @@
 
         <label class="col-sm-3 col-form-label" style="font-weight: bold;">Start Date</label>
         <div class="col-sm-9">
-            <input type="date" class="form-control" [(ngModel)]="CommencementDate"
+            <input type="date" class="form-control" [(ngModel)]="treatmentStartDate"
             placeholder="Enter Commencement Date">
         </div>
     
@@ -106,7 +106,7 @@
              <div class="col-xs-12">
                <p class="alert alert-warning">
                 <svg class="bi flex-shrink-0 me-2" width="20" height="20" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                <strong>Please Fill the Patient Details!</strong>
+                <strong>Please Enter All the Patient Details!</strong>
                </p>
            </div>
        </div>

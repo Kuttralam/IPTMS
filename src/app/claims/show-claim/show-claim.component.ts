@@ -28,7 +28,7 @@ export class ShowClaimComponent implements OnInit {
     this.claim={
       patientName:"",
       ailmentName:"",
-      packageName:"",
+      packageType:"",
       insurerName:""
 
     }

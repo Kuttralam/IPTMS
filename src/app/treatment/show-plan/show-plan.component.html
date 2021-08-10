@@ -42,13 +42,13 @@
     <tbody>
         <tr *ngFor="let dataItem of TreatmentList">
             <td>{{dataItem.PatientId}}</td>
-            <td>{{dataItem.Name}}</td>
+            <td>{{dataItem.PatientName}}</td>
             <td>{{dataItem.AilmentName}}</td>
-            <td>{{dataItem.PackageName}}</td>
-            <td>{{dataItem.TestDetails}}</td>
-            <td>&#x20B9; {{dataItem.Cost}}</td>
+            <td>{{dataItem.PackageType}}</td>
+            <td>{{dataItem.PackageDetails}}</td>
+            <td>&#x20B9; {{dataItem.TreatmentCost}}</td>
             <td>Dr. {{dataItem.SpecialistName}}</td>
-            <td>{{dataItem.TreatmentCommencementDate}}</td>
+            <td>{{dataItem.TreatmentStartDate}}</td>
             <td>{{dataItem.TreatmentEndDate}}</td>
         </tr>
     </tbody>

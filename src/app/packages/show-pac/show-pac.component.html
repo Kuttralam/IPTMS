@@ -21,11 +21,11 @@
     <tbody>
         <tr *ngFor="let dataItem of PackagesList | filter:filterTerm">
             <td>{{dataItem.packageId}}</td>
-            <td>{{dataItem.ailment}}</td>
-            <td>{{dataItem.packageName}}</td>
-            <td>{{dataItem.testDetails}}</td>
-            <td>&#x20B9; {{dataItem.cost}}</td>
-            <td>{{dataItem.duration}}</td>
+            <td>{{dataItem.ailmentName}}</td>
+            <td>{{dataItem.packageType}}</td>
+            <td>{{dataItem.packageDetails}}</td>
+            <td>&#x20B9; {{dataItem.treatmentCost}}</td>
+            <td>{{dataItem.durationInWeeks}}</td>
         </tr>
     </tbody>
 </table>

@@ -9,18 +9,18 @@ import { SharedService } from 'src/app/shared.service';
 export class AddPlanComponent implements OnInit {
 
   constructor(private service:SharedService) {
-    this.Name="";
-    this.Age="";
-    this.Ailment="";
-    this.PackageName="";
-    this.CommencementDate="";
+    this.patientName="";
+    this.patientAge="";
+    this.ailmentName="";
+    this.packageType="";
+    this.treatmentStartDate="";
   }
   @Input() treatment:any;
-  Name:string;
-  Age:string;
-  Ailment:string;
-  PackageName:string;
-  CommencementDate:string;
+  patientName:string;
+  patientAge:string;
+  ailmentName:string;
+  packageType:string;
+  treatmentStartDate:string;
 
   showMsg:boolean=false;
   showFail:boolean=false;
@@ -33,26 +33,27 @@ export class AddPlanComponent implements OnInit {
 
   initiate(){
     var val = {
-      Name:this.Name,
-      Age:this.Age,
-      Ailment:this.Ailment,
-      PackageName:this.PackageName,
-      CommencementDate:this.CommencementDate
+      patientName:this.patientName,
+      patientAge:this.patientAge,
+      ailmentName:this.ailmentName,
+      packageType:this.packageType,
+      treatmentStartDate:this.treatmentStartDate
            };
-        if(this.Name==""||this.Age==""||this.Ailment==""||this.PackageName==""||this.CommencementDate=="")
+        if(this.patientName==""||this.patientAge==""||this.ailmentName==""||this.packageType==""||this.treatmentStartDate=="")
         {
           this.showWarn=true;
       setTimeout(() => {this.showWarn=false;},2000);
           return;
         }
-        this.Name="";
-        this.Age="";
-        this.Ailment="";
-        this.PackageName="";
-        this.CommencementDate="";
+        this.patientName="";
+        this.patientAge="";
+        this.ailmentName="";
+        this.packageType="";
+        this.treatmentStartDate="";
 
     this.service.getTreatmentPlanList(val).subscribe(res=>{
       this.showMsg=true;
+      setTimeout(() => {window.location.reload();},700);
     },
     error => {
       this.showFail=true;
@@ -60,11 +61,11 @@ export class AddPlanComponent implements OnInit {
     });
   }
   reset(){
-     this.Name="";
-     this.Age="";
-     this.Ailment="";
-     this.PackageName="";
-     this.CommencementDate="";
+     this.patientName="";
+     this.patientAge="";
+     this.ailmentName="";
+     this.packageType="";
+     this.treatmentStartDate="";
      this.showWarn=false;
   };
 }
